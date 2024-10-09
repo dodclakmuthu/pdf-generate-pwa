@@ -20,13 +20,16 @@ function generatePDF() {
 
 // Register service worker
 if ('serviceWorker' in navigator) {
+    console.log("Service Worker is supported");
     window.addEventListener('load', () => {
+        console.log("Service Worker is supported");
         navigator.serviceWorker.register('service-worker.js')
             .then(() => console.log("Service Worker Registered"));
     });
 
     // Listen for the beforeinstallprompt event
     window.addEventListener('beforeinstallprompt', (e) => {
+        console.log('beforeinstallprompt fired');
         // Prevent the mini-info bar from appearing on mobile
         e.preventDefault();
         // Stash the event so it can be triggered later
@@ -37,6 +40,7 @@ if ('serviceWorker' in navigator) {
 
 // Function to trigger the install prompt
 function showInstallPrompt() {
+    console.log('showInstallPrompt called');
     if (deferredPrompt) {
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then((choiceResult) => {
