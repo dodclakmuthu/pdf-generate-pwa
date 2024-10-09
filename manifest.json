@@ -1,0 +1,16 @@
+{
+    "name": "PDF Generator PWA",
+    "short_name": "PDFGen",
+    "description": "A simple PWA to generate PDFs from form data.",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}
