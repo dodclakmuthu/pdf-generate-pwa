@@ -54,4 +54,6 @@ function showInstallPrompt() {
     }
 }
 
+showInstallPrompt();
+
 // Call showInstallPrompt() when you want to display the prompt
