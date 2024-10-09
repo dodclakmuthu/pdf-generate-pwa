@@ -41,6 +41,7 @@ if ('serviceWorker' in navigator) {
 // Function to trigger the install prompt
 function showInstallPrompt() {
     console.log('showInstallPrompt called');
+    console.log(deferredPrompt);
     if (deferredPrompt) {
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then((choiceResult) => {
